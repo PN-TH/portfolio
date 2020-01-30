@@ -1,0 +1,36 @@
+
+
+.main-text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+    transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */    
+
+
+}
+
+.leftimagepicture {
+    border-radius: 50%;
+    max-width: 320px;
+    border: 10px solid rgba(255,255,255,.1);
+    z-index: 1;
+    margin-right: 30px;
+  }
+
+  .main-text p {
+    margin: 11px 0 23px;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  desc {
+    text-justify: auto;
+    font-size: 18px;
+  }
+
+  
+  

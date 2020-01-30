@@ -1,0 +1,79 @@
+<section id="work">
+    <div class="portfolio-container">
+
+        <div class="container page-title text-center">
+            <h2 class="text-center">my <span>portfolio</span></h2>
+            <p class="title-head-subtitle"><span>Recent projets personnel ou en équipe.</span></p>
+        </div>
+
+        <div class="portfolio-section">
+            <div class="container cd-container">
+                <div>
+
+                    <ul class="row" id="portfolio-items">
+
+                        <li *ngFor="let w of genService.works; let i = index" class="col-12 col-md-6 col-lg-4" id="portfolio-items-li">
+                                <img src="{{w.image}}" alt="{{w.title}}" class="img-fluid" data-toggle="modal" [attr.data-target]="'#modal-' + i"/>
+                                <div class="modal fade bd-example-modal-lg" [attr.id]="'modal-' + i" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                      <div class="modal-content">
+                                        <div class="content">
+                                            <div class="project-content">
+                                                <img src="{{w.image}}" alt="{{w.title}}" class="img-modal"/>
+                                            </div>
+                                            <div class="txtbtn">
+                                            <div>
+                                                <ul class="project-details">
+                                                    <li><i class="fa fa-money"></i> <span class="font-weight-400 project-label"> Theme</span> : <strong class="font-weight-600 uppercase">{{w.theme}}</strong>
+                                                    </li>
+                                                    <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Projet </span>: <strong class="font-weight-600 uppercase">{{w.title}}</strong>
+                                                    </li>
+                                                    <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Collaborateurs </span>: <strong class="font-weight-600 uppercase">{{w.collaborateur}}</strong>
+                                                    </li>
+                                                    <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Durée </span>: <strong class="font-weight-600 uppercase">4 semaines</strong>
+                                                    </li>
+                                                    <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <strong class="font-weight-600 uppercase">{{w.techno}}</strong>
+                                                </ul>
+                                            </div>
+                                            <div class="previewBtn">
+                                                <a href="{{w.url}}" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                        </li>
+
+                          
+                        <!-- <li class="col-12 col-md-6 col-lg-4">
+                            <a href="#0" data-type="project-5">
+                                <img src="http://via.placeholder.com/854x480" alt="Project" class="img-fluid">
+
+
+                            </a>
+                        </li>
+
+                        <li class="col-12 col-md-6 col-lg-4">
+                            <a href="#0" data-type="project-5">
+                                <img src="http://via.placeholder.com/854x480" alt="Project" class="img-fluid">
+                            </a>
+                        </li>
+
+                        <li class="col-12 col-md-6 col-lg-4">
+                            <a href="#0" data-type="project-5">
+                                <img src="http://via.placeholder.com/854x480" alt="Project" class="img-fluid">
+                            </a>
+                        </li> -->
+
+                      
+
+
+                    </ul>
+                    
+
+                </div>
+            </div>
+        </div>
+
+        
