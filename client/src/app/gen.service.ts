@@ -45,6 +45,11 @@ export class GenService {
   updateExperience(experience: Experience): Observable<any> {
     return this.http.put<Experience>(`${this.baseUrl}/experiences/${experience.id}`, experience);
   };
+
+  deleteProject (id: number): Observable<{}> {
+    const url = `${this.baseUrl}/portfolios/${id}`; // DELETE api/heroes/42
+    return this.http.delete(url) }
+
 }
 
 

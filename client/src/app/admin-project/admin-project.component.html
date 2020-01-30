@@ -1,0 +1,20 @@
+
+    <div class="container page-title text-center">
+        <h2 class="text-center">Supprimer<span> un projet</span></h2>
+    </div>
+
+<form class="form-horizontal" [formGroup]="myProject" #ngForm="ngForm" action=" " (ngSubmit)="onSubmit(ngForm)">
+
+    <label for="exp-select">Quel est le projet à supprimer ?</label>
+
+    <select name="exp" id="exp-select" (change)="selectExperience($event)">
+        <option *ngFor="let w of genService.works" value="{{w.id}}">{{w.title}}</option>
+    </select>
+
+    <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+        <div class="button">
+            <i class="fas fa-trash-alt"></i><span class="send-text">DELETE</span>
+        </div>
+    </button>
+
+</form>
