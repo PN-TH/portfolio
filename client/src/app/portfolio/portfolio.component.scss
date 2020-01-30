@@ -1,0 +1,74 @@
+
+
+.img-fluid {
+    width: 380px;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+#portfolio-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#portfolio-items-li {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.title-head-subtitle {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.modal {
+    
+}
+.modal-content {
+    background-color: rgb(27, 26, 27);
+    margin-bottom: 100px;
+    border-bottom: 15px solid #2196F3;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+strong {
+    font-weight: bold;
+    color: #2196F3;
+}
+
+.txtbtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.previewBtn {
+    margin-bottom: 30px;
+    margin-right: 20px;
+}
+
+.project-details li {
+    font-size: 16px;
+    line-height: 33px;
+}

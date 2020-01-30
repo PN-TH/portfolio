@@ -1,0 +1,282 @@
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(158, 158, 158);
+  background: rgb(27, 26, 27);
+  font-size: 0.9em;
+  font-weight: 400;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 26, 27);
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.p-none {
+  padding: 0 !important;
+}
+
+.m-none {
+  margin: 0 !important;
+}
+
+.mr-20 {
+  margin-left: 20px;
+}
+
+hr.about-section {
+  margin: 72px auto 50px;
+}
+
+ul {
+    
+  list-style-type: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+/* Buttons */
+.btn {
+  box-shadow: none !important;
+  border-radius: 26px;
+  font-weight: 500;
+  height: 46px;
+  line-height: 46px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0 33px;
+  outline: none !important;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: .5px;
+  border: 0;
+}
+
+.btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  height: 102%;
+  left: -25%;
+  width: 0%;
+  background-color: #555;
+  transform: skew(-22deg);
+  transition-duration: .6s;
+  z-index: 1;
+}
+
+.btn:hover:before {
+  width: 180%;
+}
+
+.btn.btn-secondary {
+  color: #555;
+}
+
+.btn.btn-secondary,
+.btn.btn-secondary:after {
+  background: transparent;
+}
+
+.btn.btn-secondary:hover {
+  color: #fff;
+}
+
+.btn.btn-secondary:before {
+  background: #555;
+}
+
+.btn i {
+  padding-right: 11px;
+}
+
+.btn:hover {
+  box-shadow: none;
+  color: #fff;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-900 {
+  font-weight: 900;
+}
+
+.back-mobile {
+  display: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: initial;
+  max-width: 1170px;
+}
+
+@media only screen and (min-width: 601px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .container {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (min-width: 1199px) {
+  .container {
+    width: 100%;
+  }
+}
+
+
+
+
+/* =================================================================== */
+/* BLUE #2196F3
+====================================================================== */
+.nav-container > div > ul li.active a,
+.nav-container > div > ul li:hover a,
+.btn.btn-secondary,
+.page-title h2 span,
+.back-mobile,
+.project-info-container .projects-info h3,
+.meta a,
+.meta i,
+.main-text h1 span,
+.badges h3 span,
+section#blog article h4:hover,
+body.dark section#blog article h4:hover,
+body.dark.blog article a h4:hover,
+.contact-container .contact .rightside h6 i,
+.page-title h2 span:nth-child(2),
+.skill-title,
+.custom-list h6 i,
+.blog article h4:hover,
+.comments-list .comment-reply,
+body.blog.dark .comments-list .comment-reply:hover,
+.contact-container ul.social-intro li a,
+.navigation li a i,
+.resume-items .item .card-header .year i.fa-caret-right,
+.badges h3 span,
+.chart-bar>.percent  {
+	color: #2196F3;
+}
+.cd-stretchy-nav.nav-is-visible ul li.active a,
+.cd-stretchy-nav.nav-is-visible ul li.active a span,
+.cd-stretchy-nav.nav-is-visible ul li a:hover,
+.cd-stretchy-nav.nav-is-visible ul li a:hover span {
+	color: #2196F3 !important;
+}
+.chart-bar>.item-progress,
+.navigation li > div a span:after,
+.cd-stretchy-nav ul a::before,
+.nav-container > div > ul li:not(:last-child):hover:after,
+body.dark .nav-container > div > ul li:not(:last-child):hover:after,
+.nav-container > div > ul li.active:not(:last-child):after,
+body.dark .nav-container > div > ul li.active:not(:last-child):after,
+.contact-container ul.social-intro li a:hover,
+.carousel-controls,
+body.dark .carousel-controls,
+.resume-items .item a,
+#progress-line-container,
+#header > div.bg,
+.ah-headline.clip .ah-words-wrapper::after,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active ,
+.btn.btn-secondary:before,
+section#blog .post-date,
+.resume-items .item-label,
+.btn,
+.comments-form button,
+.comments-form button:hover,
+.comments-form button:focus,
+.comments-form button:active,
+.back-mobile,
+.page-title .title-head-subtitle:before,
+.page-title .title-head-subtitle:after{
+	background-color: #2196F3;
+}
+
+.contact-container ul.social-intro li a,
+.btn.btn-secondary,
+.btn.btn-secondary:focus,
+.chart-bar>.percent {
+	border: 1px solid #2196F3;
+}
+
+.arrow {
+	border: 1px solid #2196F3;
+    border-width: 0 1px 1px 0;
+}
+
+.resume-items .item:before {
+	border-left: 1px solid #2196F3;
+}
+
+.resume-items .item .bullet{
+	border: 2px solid #2196F3;
+}
+
+.personal-info .image-container:before {
+	border: 6px solid #2196F3;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active {
+	border-color:#2196F3;
+}
+
+body.blog .container-fluid.page-title .content-banner {
+	border-bottom:8px solid #2196F3;
+}
+#portfolio-items li a div {
+	background: #2196F3;
+}
+
+
+
+

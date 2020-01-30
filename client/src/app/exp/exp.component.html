@@ -1,0 +1,210 @@
+
+<section id="about">
+    <div class="container page-title text-center">
+        <h2 class="text-center">a <span>propos</span></h2>
+        <span class="title-head-subtitle">I design and code beautiful things, and I love what I do.</span>
+    </div>
+
+    <div class="container infos">
+        <div class="row personal-info" *ngFor="let u of genService.user">
+
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="image-container">
+                    <img class="img-fluid d-block" src="{{u.avatar}}"  alt="{{u.firstname}} {{u.lastname}}" />
+                </div>
+                <p  class="d-block d-md-none">Actuellement en formation Développeur Web & Mobile spécialisé sur le
+                    framework Angular 8, je suis à la recherche d’un stage de 4 à 6 mois.
+                    Autonome, volontaire et persévérant, mon caractère me permet
+                    de m’adapter rapidement à une équipe de travail.
+                    Passionné par le web et les technologies, je reste à l’affût
+                    des dernières tendances et technologies utilisées.</p>
+            </div>
+            <div class="row col-xl-6 col-lg-6 col-md-12">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                    <ul class="list-1">
+                        <li>
+                            <h6><span class="font-weight-600">Prénom: </span><strong>{{u.firstname}}</strong></h6>
+                        </li>
+                        <li>
+                            <h6><span class="font-weight-600">Nom: </span><strong>{{u.lastname}}</strong></h6>
+                        </li>
+                        <li>
+                            <h6><span class="font-weight-600">Naissance: </span><strong>{{u.birthdate}}</strong></h6>
+                        </li>
+                        <li>
+                            <h6><span class="font-weight-600">Nationalité: </span><strong>{{u.nationality}}</strong></h6>
+                        </li>
+                        <li>
+                            <h6><span class="font-weight-600">Experience: </span><strong>{{u.experience}}</strong></h6>
+                        </li>
+                        <li>
+                            <h6><span class="font-weight-600">Address: </span><strong>{{u.adress}}</strong></h6>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                    <ul class="list-2">
+                        <li>
+                            <h6><span class="font-weight-600">Status: </span><strong>{{u.status}}</strong></h6>
+                        </li>
+                        <li>
+                            <h6><span class="font-weight-600">Langues: </span><strong>{{u.language}}</strong></h6>
+                        </li>
+                        <li>
+                            <h6><span class="font-weight-600">Téléphone: </span><strong>{{u.phone}}</strong></h6>
+                        </li>
+                        <li>
+                            <h6><span class="font-weight-600">Email: </span><a href="mailto:#">{{u.email}}</a></h6>
+                        </li>
+                        <li>
+                            <h6><span class="font-weight-600">Git:</span><a href="https://github.com/PN-TH">{{u.git}}</a></h6>
+                        </li>
+                        <li>
+                            <h6><span class="font-weight-600">LinkedIn:</span><a href="https://www.linkedin.com/in/thomas-ponthoreau-644461144/">{{u.linkedIn}}</a></h6>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 resume-btn-container">
+                    <a href="assets/CV_Thomas_Ponthoreau.pdf" download class="btn btn-resume"><span><i class="fa fa-download"></i>télécharger mon cv</span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container col-12 mx-auto text-center">
+        <hr class="about-section" />
+    </div>
+
+    <div class="resume-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <h2 class="font-weight-600 uppercase title-section">experience</h2>
+                    <div class="resume-items">
+
+                        <div class="item" *ngFor="let e of genService.exp">
+                            <span class="bullet"></span>
+                            <div class="card">
+                                <div class="card-header">
+                                    <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>{{e.date}}</span>
+                                    <span class="d-block font-weight-400 uppercase">
+                                    {{e.title}} 
+                                    <span class="separator"></span>
+                                    <span class="font-weight-700">{{e.society}}</span>
+                                    </span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="description">{{e.description}}</p>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-lg-6 col-md-6 skills-container">
+                    <h2 class="font-weight-600 uppercase title-section">Education</h2>
+                    <div class="resume-items">
+                        <div class="item" *ngFor="let f of genService.formations">
+                            <span class="bullet"></span>
+                            <div class="card">
+                                <div class="card-header">
+                                    <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>{{f.date}}</span>
+                                    <span class="d-block font-weight-400 uppercase">
+                                    {{f.title}}
+                                    <span class="separator"></span>
+                                    <span class="font-weight-700">{{f.school}}</span>
+                                    </span>
+                                </div>
+                                <div class="card-body">
+                                    <p>{{f.description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+
+
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="font-weight-600 uppercase title-section skills-title">skills</h2>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <span class="skill-text">Angular</span>
+                    <div class="chart-bar">
+                        <span class="item-progress" data-percent="80" style="width: 80%;"></span>
+                        <span class="percent" style="right: calc(20% - 21px);">80%<div class="arrow"></div></span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <span class="skill-text">javascript</span>
+                    <div class="chart-bar">
+                        <span class="item-progress" data-percent="60" style="width: 60%;"></span>
+                        <span class="percent" style="right: calc(40% - 21px);">60%<div class="arrow"></div></span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <span class="skill-text">css</span>
+                    <div class="chart-bar">
+                        <span class="item-progress" data-percent="75" style="width: 75%;"></span>
+                        <span class="percent" style="right: calc(25% - 21px);">75%<div class="arrow"></div></span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <span class="skill-text">html</span>
+                    <div class="chart-bar">
+                        <span class="item-progress" data-percent="80" style="width: 80%;"></span>
+                        <span class="percent" style="right: calc(20% - 21px);">80%<div class="arrow"></div></span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <span class="skill-text">Node JS</span>
+                    <div class="chart-bar">
+                        <span class="item-progress" data-percent="75" style="width: 75%;"></span>
+                        <span class="percent" style="right: calc(25% - 21px);">75%<div class="arrow"></div></span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <span class="skill-text">Git</span>
+                    <div class="chart-bar">
+                        <span class="item-progress" data-percent="70" style="width: 70%;"></span>
+                        <span class="percent" style="right: calc(30% - 21px);">70%<div class="arrow"></div></span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <span class="skill-text">illustrator</span>
+                    <div class="chart-bar">
+                        <span class="item-progress" data-percent="60" style="width: 60%;"></span>
+                        <span class="percent" style="right: calc(40% - 21px);">60%<div class="arrow"></div></span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <span class="skill-text">after effects</span>
+                    <div class="chart-bar">
+                        <span class="item-progress" data-percent="75" style="width: 75%;"></span>
+                        <span class="percent" style="right: calc(25% - 21px);">75%<div class="arrow"></div></span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <span class="skill-text">photoshop</span>
+                    <div class="chart-bar">
+                        <span class="item-progress" data-percent="60" style="width: 60%;"></span>
+                        <span class="percent" style="right: calc(40% - 21px);">60%<div class="arrow"></div></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
