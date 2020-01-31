@@ -46,6 +46,10 @@ export class GenService {
     return this.http.put<Experience>(`${this.baseUrl}/experiences/${experience.id}`, experience);
   };
 
+  updateFormation(formation: Formation): Observable<any> {
+    return this.http.put<Formation>(`${this.baseUrl}/formations/${formation.id}`, formation);
+  };
+
   deleteProject (id: number): Observable<{}> {
     const url = `${this.baseUrl}/portfolios/${id}`; // DELETE api/heroes/42
     return this.http.delete(url) }

@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { AdminExpComponent } from './admin-exp/admin-exp.component';
 import { AdminProjectComponent } from './admin-project/admin-project.component';
+import { AdminFormationComponent } from './admin-formation/admin-formation.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AdminProjectComponent } from './admin-project/admin-project.component';
     AdminUserComponent,
     AdminComponent,
     AdminExpComponent,
-    AdminProjectComponent
+    AdminProjectComponent,
+    AdminFormationComponent
   ],
   imports: [
     BrowserModule,

@@ -14,12 +14,12 @@ export class AdminUserComponent implements OnInit {
 
 
   myProject = this.fb.group({
-    title: [' '],
-    image: [' '],
-    description: [' '],
-    url: [' '],
-    theme: [' '],
-    techno: [' '],
+    title: [''],
+    image: [''],
+    description: [''],
+    url: [''],
+    theme: [''],
+    techno: ['']
   });
 
 

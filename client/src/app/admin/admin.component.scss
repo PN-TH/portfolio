@@ -7,7 +7,9 @@
 .main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-top: 20px;
+    align-items: center;
 }
 
 .delete {
@@ -16,5 +18,18 @@
     line-height: 50px;
 }
 
+.exp {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+
+   
+}
+
+.line {
+    border-bottom: 1px solid #2196F3;
+    width: 60%;
+    margin-bottom: 30px;
+}
 
 

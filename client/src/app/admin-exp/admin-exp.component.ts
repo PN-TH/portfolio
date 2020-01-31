@@ -14,11 +14,11 @@ export class AdminExpComponent implements OnInit {
   expId: number
 
   myExperience = this.fb.group({
-    id: [' '],
-    title: [' '],
-    society: [' '],
-    description: [' '],
-    date: [' ']
+    id: [''],
+    title: [''],
+    society: [''],
+    description: [''],
+    date: ['']
   });
 
   constructor(private genService: GenService, private fb: FormBuilder, private router: Router) { }

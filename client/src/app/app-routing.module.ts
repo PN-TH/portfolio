@@ -3,8 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { HomeComponent } from './home/home.component';
 import { ExpComponent } from './exp/exp.component';
-import { AdminUserComponent } from './admin-user/admin-user.component';
-import { AdminExpComponent } from './admin-exp/admin-exp.component';
 import { AdminComponent } from './admin/admin.component';
 
 
