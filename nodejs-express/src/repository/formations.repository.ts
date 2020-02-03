@@ -51,8 +51,8 @@ export class FormationsRepository {
      */
     insert(formation: Formation) {
       return this.connection.query(
-        `INSERT INTO ${this.table} (title, society, description, date, user_id) VALUES (?,?,?,?,?)`,
-        [formation.title, formation.society, formation.description, formation.date, formation.user_id]
+        `INSERT INTO ${this.table} (title, school, description, date, user_id) VALUES (?,?,?,?,?)`,
+        [formation.title, formation.school, formation.description, formation.date, formation.user_id]
       ).then((result: any) => {
         // After an insert the insert id is directly passed in the promise
         return this.findById(result.insertId);
@@ -65,8 +65,8 @@ export class FormationsRepository {
      */
     update(formation: Formation) {
       return this.connection.query(
-        `UPDATE ${this.table} SET title = ?, society = ?, description = ?, date = ?, user_id = ?, WHERE id = ?`,
-        [formation.title, formation.society, formation.description, formation.date, formation.user_id, formation.id]
+        `UPDATE ${this.table} SET title = ?, school = ?, description = ?, date = ?, user_id = ? WHERE id = ?`,
+        [formation.title, formation.school, formation.description, formation.date, formation.user_id, formation.id]
       ).then(() => {
         return this.findById(formation.id);
       });

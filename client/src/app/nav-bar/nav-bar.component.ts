@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
+import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService, private userService: UserService, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  logOut(){
+    this.userService.connectedUser = undefined;
+    localStorage.removeItem('token');
+    localStorage.removeItem('email');
+    localStorage.removeItem('role');
+    this.router.navigateByUrl('/connectez-vous');
   }
 
 }
