@@ -1,9 +1,9 @@
 import express from 'express';
 import loaders from './loaders';
-import { UsersController } from './controller/users.controller';
 import { FormationsController } from './controller/formations.controller';
 import { ExperiencesController } from './controller/experiences.controller';
 import { PortfoliosController } from './controller/portfolios.controller';
+import { AuthController } from './controller/auth.controller';
 
 
 async function startServer() {
@@ -14,10 +14,10 @@ async function startServer() {
     await loaders(app);
 
     // Ajout des différentes route de votre application
-    UsersController(app);
     FormationsController(app);
     ExperiencesController(app);
     PortfoliosController(app);
+    AuthController(app);
 
 
     // Démarrage du serveur une fois que tout est correctement init

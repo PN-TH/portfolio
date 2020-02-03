@@ -13,6 +13,8 @@ export class User {
   email!: string;
   git!: string;
   linkedIn!: string;
+  password!: string;
+  role!: string;
 
   constructor(input: User) {
     Object.assign(this, input);

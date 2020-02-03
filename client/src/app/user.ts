@@ -13,4 +13,6 @@ export class User {
     email: string;
     git: string;
     linkedIn: string;
+    password: string;
+    role: string;
 }

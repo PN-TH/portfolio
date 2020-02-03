@@ -9,7 +9,8 @@
             <li><a [routerLink]="['/home']">Home</a></li>
             <li><a [routerLink]="['/cv']">Experience</a></li>
             <li><a [routerLink]="['/portfolio']">Portfolio</a></li>
-            <li><a [routerLink]="['/admin-user']">Admin</a></li>
+            <li><a [routerLink]="['/admin']">Admin</a></li>
+            <li (click)="logOut()" *ngIf="authService.getToken()">Se Deconnecter</li>
           </ul>
         </div>
       </div>

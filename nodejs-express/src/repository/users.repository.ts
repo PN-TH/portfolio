@@ -44,6 +44,11 @@ export class UsersRepository {
           .then((results: any) => new User(results[0]));
     }
 
+    findByEmail(email: string): Promise<User> {
+      return this.connection.query(`SELECT * FROM ${this.table} WHERE email = ?`, [email])
+        .then((results: any) => new User(results[0]));
+  }
+
 
     /**
      * Make a query to the database to insert a new user and return the created user in a promise.
@@ -52,9 +57,9 @@ export class UsersRepository {
     insert(user: User) {
       return this.connection.query(
         `INSERT INTO ${this.table} (firstname, lastname, avatar, birthdate, nationality, experience, adress, status, language,
-            phone, email, git, linkedIn) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+            phone, email, git, linkedIn, password, role) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
         [user.firstname, user.lastname, user.avatar, user.birthdate, user.nationality, user.experience, user.adress, user.status, user.language,
-        user.phone, user.email, user.git, user.linkedIn]
+        user.phone, user.email, user.git, user.linkedIn, user.password, user.role]
       ).then((result: any) => {
         // After an insert the insert id is directly passed in the promise
         return this.findById(result.insertId);
@@ -68,9 +73,9 @@ export class UsersRepository {
     update(user: User) {
       return this.connection.query(
         `UPDATE ${this.table} SET firstname = ?, lastname = ?, avatar = ?, birthdate = ?, nationality = ?, experience = ?, adress = ?, status = ?, 
-        language = ?, phone = ?, email = ?, git = ?, linkedIn = ? WHERE id = ?`,
+        language = ?, phone = ?, email = ?, git = ?, linkedIn = ? password = ?, role = ? WHERE id = ?`,
         [user.firstname, user.lastname, user.avatar, user.birthdate, user.nationality, user.experience, user.adress, user.status, user.language,
-            user.phone, user.email, user.git, user.linkedIn, user.id]
+            user.phone, user.email, user.git, user.linkedIn, user.password, user.role, user.id]
       ).then(() => {
         return this.findById(user.id);
       });
