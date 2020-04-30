@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "~8.2.9",
     "@angular/router": "~8.2.9",
     "bootstrap": "^3.3.7",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^2.2.0",
     "popper.js": "^1.16.1",
